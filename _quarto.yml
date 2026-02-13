@@ -1,0 +1,33 @@
+project:
+  type: website
+
+execute:
+  cache: true
+  freeze: auto
+
+website:
+  reader-mode: false
+  page-navigation: true
+  title: "FPS"
+  navbar:
+    border: true
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: Quem somos
+      - href: contato.qmd
+        text: Contato
+  page-footer:
+    border: true
+    left: © <span id='copyright-year'></span>. All rights reserved.
+format:
+  html:
+    include-after-body: footer.html
+    theme:
+      - cosmo
+    css: styles.css
+    toc: true
+    reader-mode: true
+editor: visual
