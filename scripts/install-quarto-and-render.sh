@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# versão padrão caso não esteja definida
 QUARTO_VERSION="${QUARTO_VERSION:-1.4.550}"
 
 QUARTO_HOME="$HOME/.quarto"
@@ -12,7 +11,7 @@ curl -L \
   "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" \
   -o /tmp/quarto.tar.gz
 
-echo "Extracting Quarto..."
+echo "Extracting..."
 tar -xzf /tmp/quarto.tar.gz -C "$QUARTO_HOME" --strip-components=1
 
 export PATH="$QUARTO_HOME/bin:$PATH"
